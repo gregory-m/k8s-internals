@@ -1,0 +1,27 @@
+# permissions for end users to view lamps.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: lamp-viewer-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: controller
+    app.kubernetes.io/part-of: controller
+    app.kubernetes.io/managed-by: kustomize
+  name: lamp-viewer-role
+rules:
+- apiGroups:
+  - lighting.mops.ridewithvia.com
+  resources:
+  - lamps
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - lighting.mops.ridewithvia.com
+  resources:
+  - lamps/status
+  verbs:
+  - get

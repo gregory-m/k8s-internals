@@ -1,0 +1,7 @@
+apiVersion: lighting.mops.ridewithvia.com/v1
+kind: Lamp
+metadata:
+  name: mops-lamp
+spec:
+  host: 198.51.100.11
+  color: "000000"

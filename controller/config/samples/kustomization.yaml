@@ -1,0 +1,4 @@
+## Append samples of your project ##
+resources:
+- lighting_v1_lamp.yaml
+#+kubebuilder:scaffold:manifestskustomizesamples
